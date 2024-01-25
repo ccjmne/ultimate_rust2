@@ -4,6 +4,14 @@
 //
 // Once you've got the documentation here, run `cargo doc --no-deps --open` and take a look!
 
+//! A pumpkin, in English-language vernacular, is a cultivated winter squash in the genus [Cucurbita](https://en.wikipedia.org/wiki/Cucurbita).
+//!
+//! The term is most commonly applied to round, orange-colored squash varieties,
+//! though it does not possess a scientific definition and may be used in reference
+//! to many different squashes of varied appearance.
+//!
+//! ![Some pumpkins](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+
 // 2. What about an image!? Add an image of a pumpkin to the end of the module-level documentation.
 // The markdown format is ![some alt text](https://url-to-the-image.png)
 // Here's the image to link to: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg
@@ -15,8 +23,15 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+/// Big orange thing
+///
+/// # Recipes
+///
+/// The recipes aren't available just yet, but they will be soon!
 pub struct Pumpkin {
+    /// The `roundness` of the pumpkin, as a percentage.
     pub roundness: f32,
+    /// The `orangeness` of the pumpkin, as a number from 8 to 27.
     pub orangeness: i32,
 }
 
@@ -24,16 +39,20 @@ pub struct Pumpkin {
 // can't be used for pie. :'-(
 
 impl Pumpkin {
+    /// Smash a pumpkin.
+    /// Beware! Once it is smashed, it may not anymore be used for a pie.
     pub fn smash(self) {}
 }
 
 // 5. Document that BURNT_ORANGE is for the "orangeness" field in the Pumpkin struct.
 // - Link to the Pumpkin struct in your description
 
+/// The `BURNT_ORANGE` color is for the [`Pumpkin::orangeness`] field.
 pub const BURNT_ORANGE: i32 = 13;
 
 // Challenge: Find the option to pass to `cargo doc` so that documentation for this private item
 // gets generated as well.  Hint: `cargo doc -h` will show you all the relevant options.
+// carge doc --document-private-items
 
 /// For internal use only. In fact, this documentation is so private that it won't be generated.
 /// At least not by default. But if you pass the correct option in, it will magically appear!
