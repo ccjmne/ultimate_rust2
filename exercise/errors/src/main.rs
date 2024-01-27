@@ -1,6 +1,6 @@
 // START IN lib.rs!
 
-use anyhow::{Error, Ok, Result};
+use anyhow::{Ok, Result};
 use aquarium::Dolphin;
 
 // Silence some warnings so they don't distract from the exercise.
@@ -31,7 +31,7 @@ fn play_time(dolphin: &Dolphin) -> Result<Vec<String>> {
     Ok(responses)
 }
 
-fn main() -> Result<(), Error> {
+fn main() -> Result<()> {
     let dolphins = vec![
         Dolphin {
             name: "Augustinius".into(),
